@@ -24,14 +24,44 @@ if (isset($_POST['loginsubmit'])) {
 				}	 
 				
 				if ($result) {
-					include_once 'classes/User.php';
+					
+
+					// Checks to see if serialized object is in db
+					// Use object to load main if there is one in db
+					require_once 'connection.php';
+				
+					$sql = "SELECT obj_user FROM 'users' WHERE 'username' = '$username' AND password = '$password'";
+					
+					// Runt de Query en stopt resultaat in een variabel		
+					$result = mysqli_query($link, $sql);
+
+					if (!empty($result)) {
 					session_start();
-					$user = new User($username, $password);
-					$_SESSION['user'] = serialize($user);
+					$result = unserialize($result);
+					$_SESSION['user'] = serialize($result);
 
 					session_write_close();
 
 					header("Location: main.php");
+					}
+
+					else {
+					include_once 'classes/User.php';
+
+					session_start();
+					$user = new User($username, $password);
+					$userid = $user->setUserid($username, $password);
+					$_SESSION['user_id'] = serialize($userid);
+					$_SESSION['user'] = serialize($user);
+
+
+					session_write_close();
+
+					header("Location: main.php");
+
+					}
+					// If not then create new object
+
 				}
 			}
 
