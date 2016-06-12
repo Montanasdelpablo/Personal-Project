@@ -48,6 +48,20 @@ require 'header.php';
 		?>
 		points.
 		</p>
+
+
+
+		<p> Your user id is:
+		<?php 
+
+		echo $user->showUserid();
+
+		?>
+		</p>
+
+		<br>
+
+		<button type="button"> Save account </button>
 	</div>
 
 
@@ -60,6 +74,7 @@ require 'header.php';
 		<li> <a href=""> Messages  </a> </li>
 		<li> <a href=""> Help </a> </li>
 		<li> <a href=""> Contact </a> </li>
+		<li> <a href="logout.php"> Log out </a> </li>
 	</ul>
 
 
