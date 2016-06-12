@@ -10,9 +10,12 @@
 
 <title> LCS Manager </title>
 
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+
 <?php 
 
-
+require 'classes/User.php';
 
 
 
