@@ -1,0 +1,207 @@
+body {
+	height: 100%;
+	width: 100%;
+	background-image: url(img/background.jpg);
+	background-size: cover;
+}
+
+#maincontent {
+	height:100%;
+	width:100%;
+	}
+
+#maincontent #login {
+	width:50%;
+	height:40%;
+	margin: 0 auto;
+	position: relative;
+	top:150px;
+}
+
+#maincontent #loginheader {
+	width:100%;
+	height:150px;
+	background-color: #FC6C6D;
+	color:#fff;
+}
+
+#loginheader h1 {
+	margin-left:15px;
+	color:#5E5D98;
+}
+
+#loginheader h4 {
+	margin-left:15px;
+}
+
+#maincontent #logininfo {
+	width:100%;
+	height:250px;
+	background-color: #FC6C6D;
+	color:#fff;
+}
+
+#logininfo h1 {
+	color:#5E5D98;
+}
+
+#logininfo input {
+	color:#313975;
+}
+
+#maincontent #iconlist {
+	text-decoration: none;
+	display: inline-block;
+	list-style-type: none;
+	position: absolute;
+	top:25px;
+	right:25px;
+}
+
+#sidebar {
+	width:20%;
+	height:100%;
+	background-color: #36394B;
+	left:0;
+	position: fixed;
+}
+
+#content {
+	width:101%;
+	height:100%;
+	background-color: #FC6C6D;
+	margin-right: 0px;
+	
+}
+
+#sidebar {
+	color:#fff;
+}
+
+#sidebar #sidebarlogo {
+
+}
+
+#sidebar #sidebarlogo h1 {
+	color:#fff;
+	margin-left:15px;
+}
+
+#sidebar #socialmediaicons #iconlist {
+	list-style-type: none;
+
+}
+
+#sidebar #socialmediaicons #iconlist li {
+	display: inline;
+	margin-left:19px;
+	position: relative;
+	top:45px;
+}
+
+#sidebar #navigationbar #navigationlist {
+	list-style-type: none;
+	position: relative;
+	top:100px;
+	color:#fff;
+}
+
+#sidebar #navigationbar #navigationlist li {
+	margin-top:5px;
+}
+
+#sidebar #navigationbar #navigationlist a {
+	color:#fff;
+	text-decoration: none;
+
+}
+
+#content {
+	width:80%;
+	height: auto;
+	position: absolute;
+	left:20%;
+	color: #fff;
+}
+
+#content #row1 {
+	width:100%;
+	height:400px;
+	padding-left:26%;
+}
+
+#content #row1 div {
+	margin:35px 15px 15px 10px;
+}
+
+#content #row2 {
+	width:100%;
+	height:400px;
+	padding-left:26%;
+}
+
+#content #row2 div {
+	margin:35px 15px 15px 10px;
+}
+
+#content #row3 {
+	width:100%;
+	height:400px;
+	padding-left:26%;
+}
+
+#content #row3 div {
+	margin:35px 15px 15px 10px;
+}
+
+#content #row4 {
+	width:100%;
+	height:400px;
+	padding-left:26%;
+}
+
+#content #row4 div {
+	margin:35px 15px 15px 10px;
+}
+
+#content #row1 .team {
+
+
+}
+
+#content .team {
+	width:300px;
+	height:300px;
+	float:left;
+
+}
+
+#content .team img {
+	width:150px;
+	height:150px;
+}
+
+#content #eulcs {
+	background-image: url(img/eulcs.jpg);
+	height:300px;
+	background-size: cover;
+
+} 
+
+#content #nalcs {
+	background-image: url(img/nalcs.jpg);
+	height:300px;
+	background-size: cover;
+}
+
+#content #lck {
+	background-image: url(img/lck.jpg);
+	height:300px;
+	background-size: cover;
+}
+
+#content #lpl {
+	background-image: url(img/lpl.jpg);
+	height:300px;
+	background-size: cover;
+}
