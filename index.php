@@ -6,15 +6,6 @@ require 'header.php';
 ?>
 
 
-<!--
-require_once 'connection.php';
-
-$query = "INSERT INTO users (username, password, email) VALUES  ('Test', 'Test', 'Test@gmail.com')";
-$resultmode = MYSQLI_STORE_RESULT;
-
-mysqli_query($link, $query , $resultmode) or die(mysql_error());
-*/
--->
 
 
 <div id="maincontent" class="container">
@@ -34,12 +25,36 @@ mysqli_query($link, $query , $resultmode) or die(mysql_error());
 	
 		<div id="logincredentials" class="col-md-10">
 		
-		<form method="post" action="loginhandler.php">
+		<form class="col-md-6" method="post" action="loginhandler.php">
+			<h1> Log in </h1>
 
-			<h1> What is your manager name? </h1>
-			<input type="text" name="username">
+			<label> Username: </label>
+			<input type="text" name="username"> <br>
 
-			<input type="submit" value="Start managing!" name="submit">
+			<label> Password: </label>
+			<input type="password" name="password"> <br>
+
+			<br>
+
+			<input type="submit" value="Start managing!" name="loginsubmit">
+
+		</form>
+
+		<form class="col-md-6" method="post" action="register.php">
+
+			<h1> Register </h1>
+			<label> Username: </label>
+			<input type="text" name="username"> <br>
+
+			<label> Password: </label>
+			<input type="password" name="password"> <br>
+
+			<label> Email: </label> <br>
+			<input type="text" name="email"> <br>
+
+			<br>
+
+			<input type="submit" value="Register now" name="submit">
 
 		</form>
 
