@@ -17,13 +17,37 @@ require 'header.php';
 
 	<div id="socialmediaicons" class="row">
 		<ul id="iconlist" class="col-md-12">
-			<li> <img src="img/facebook.png"> </li>
-			<li> <img src="img/twitter.png"> </li>
-			<li> <img src="img/instagram.png"> </li>
+			<li> <img src=""> </li>
+			<li> <img src=""> </li>
+			<li> <img src=""> </li>
 
 
 		</ul>
 
+	</div>
+
+	<div class="row">
+		<p> Logged in as:
+		<?php 
+		
+		include_once 'classes/User.php';
+
+		$user = unserialize($_SESSION['user']);
+
+		echo $user->showUser();
+
+		
+		?>
+		</p>
+
+		<p> You have:
+		<?php 
+
+		echo $user->showPoints();
+
+		?>
+		points.
+		</p>
 	</div>
 
 
@@ -38,7 +62,7 @@ require 'header.php';
 		<li> <a href=""> Contact </a> </li>
 	</ul>
 
-	
+
 
 	</div>
 
@@ -50,10 +74,6 @@ require 'header.php';
 <p>
 <?php
 
-require 'classes/Game.php';
-
-$game = new Game("FCSchalke04", "EULCS");
-$game->showGameinfo();
 
 
 
