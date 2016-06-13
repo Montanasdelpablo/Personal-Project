@@ -40,6 +40,13 @@ if (isset($_POST['loginsubmit'])) {
 					$result = unserialize($result);
 					$_SESSION['user'] = serialize($result);
 
+
+					$profilepic = imagepng("img/businessman.png");
+					if ($profilepic) {
+					$profilepic = serialize($profilepic);
+					$user->addProfilepicture($profilepic);
+					}
+
 					session_write_close();
 
 					header("Location: main.php");
@@ -51,8 +58,20 @@ if (isset($_POST['loginsubmit'])) {
 					session_start();
 					$user = new User($username, $password);
 					$userid = $user->setUserid($username, $password);
+
 					$_SESSION['user_id'] = serialize($userid);
 					$_SESSION['user'] = serialize($user);
+
+					
+
+					$profilepic = imagepng("img/businessman.png");
+					
+					if ($profilepic) { 
+						$profilepic = serialize($profilepic);
+						$user->addProfilepicture($profilepic);
+					}
+
+							
 
 
 					session_write_close();
