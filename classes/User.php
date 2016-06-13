@@ -8,15 +8,19 @@ class User {
   private $_username; 
   private $_password;
   private $_email;
-  public $points = 100;
+  public $points = 0;
   private $object;
   private $_userid;
+  public $profilepicture;
+  private $_rp = 100;
 
 
   public function __construct($name, $password) { 
   	
 	$this->_username = $name; 
 	$this->_password = $password;
+
+
 	  } 
 
 	  public function setUserid($name, $password) {
@@ -52,10 +56,6 @@ public function showUserid() {
 }
 
 
-public function buyJemoeki()
-	   {
-	   	$this->points -= 5;
-	   }
 
 
   public function showUser() { 
@@ -66,16 +66,22 @@ public function buyJemoeki()
   	return $this->points;
   }
 
+  public function showRP() {
+  	return $this->_rp;
+  }
+
   public function setEmail($email) { 
     $this->_email = $email; 
   }
 
-  public function addUser() {
-
-	
+  public function addProfilepicture($profilepic) {
+  	$this->profilepicture = $profilepic;	
 
   }
 
+  public function showProfilepicture() {
+  	return $this->profilepicture;
+  }
   public function saveUser($obj)
   {				
 
